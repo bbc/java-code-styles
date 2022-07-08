@@ -5,15 +5,12 @@ echo "Installing BBC News and Weather Android Studio IntelliJ configs..."
 
 CONFIGS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/configs"
 
-for i in $HOME/Library/Preferences/IntelliJIdea*  \
-         $HOME/Library/Preferences/IdeaIC*        \
-         $HOME/Library/Preferences/AndroidStudio* \
-         $HOME/Library/Application\ Support/JetBrains/IntelliJIdea* \
+for i in $HOME/Library/Preferences/AndroidStudio* \
          $HOME/.IntelliJIdea*/config              \
          $HOME/.IdeaIC*/config                    \
-         $HOME/.AndroidStudio*/config \
+         $HOME/.AndroidStudio*/config             \
          $HOME/Library/Application\ Support/Google/AndroidStudio* \
-         $HOME/Library/Application\ Support/JetBrains/IdeaIC*
+         $HOME/Library/Application\ Support/Google/AndroidStudio*/settingsRepository/repository
 do
   if [[ -d "$i" ]]; then
     # Install codestyles

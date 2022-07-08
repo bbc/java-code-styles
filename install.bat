@@ -5,6 +5,7 @@ echo Installing BBC News and Weather Android Studio configs...
 setlocal enableDelayedExpansion
 
 for /D %%i in ("%userprofile%"\.AndroidStudio*) do call :copy_config "%%i"
+for /D %%i in ("%userprofile%"\.AndroidStudio*\settingsRepository\repository) do call :copy_config "%%i"
 
 echo.
 echo Restart AndroidStudio, go to preferences, and apply 'BBC News and Weather' code style.
